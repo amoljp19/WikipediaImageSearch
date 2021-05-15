@@ -5,13 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".WikiImageSearchApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WikipediaImageSearch">
-        <activity android:name=".MainActivity">
+        <activity android:name=".imagesearch.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
