@@ -1,11 +1,17 @@
 package com.softaai.wikipediaimagesearch.model
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.softaai.wikipediaimagesearch.model.Pages.Companion.TABLE_NAME
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+@Entity(tableName = TABLE_NAME)
 @JsonClass(generateAdapter = true)
 data class Pages(
+    @PrimaryKey
+    var id: Int = 0,
     @Json(name = "11903589")
     val x11903589: X11903589,
     @Json(name = "13260340")
@@ -27,3 +33,8 @@ data class Pages(
     @Json(name = "590246")
     val x590246: X590246
 )
+{
+    companion object {
+        const val TABLE_NAME = "pages"
+    }
+}

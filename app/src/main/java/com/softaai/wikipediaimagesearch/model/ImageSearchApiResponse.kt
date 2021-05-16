@@ -12,4 +12,8 @@ data class ImageSearchApiResponse(
     val continueX: Continue,
     @Json(name = "query")
     val query: Query
-)
+){
+    companion object {
+        const val TABLE_NAME = "news_articles"
+    }
+}
