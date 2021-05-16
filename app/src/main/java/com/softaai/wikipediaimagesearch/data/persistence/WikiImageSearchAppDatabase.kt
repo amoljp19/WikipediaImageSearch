@@ -4,10 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.softaai.wikipediaimagesearch.model.Pages
 
 
 @Database(entities = [Pages::class], version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class WikiImageSearchAppDatabase : RoomDatabase() {
 
     abstract fun getPagesDao(): PagesDao
