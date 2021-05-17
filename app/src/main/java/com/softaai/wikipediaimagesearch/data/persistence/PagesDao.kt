@@ -21,6 +21,6 @@ interface PagesDao {
 
 
     @Query("SELECT * FROM ${Pages.TABLE_NAME}")
-    fun getAllPages(): Pages
+    fun getAllPages(): Flow<Pages>
 
 }

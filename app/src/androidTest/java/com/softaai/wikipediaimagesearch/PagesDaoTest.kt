@@ -6,6 +6,7 @@ import androidx.test.espresso.matcher.ViewMatchers.assertThat
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.softaai.wikipediaimagesearch.data.persistence.WikiImageSearchAppDatabase
 import com.softaai.wikipediaimagesearch.model.*
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.CoreMatchers.equalTo
 import org.junit.After
@@ -47,7 +48,7 @@ class PagesDaoTest {
 
         mDatabase.getPagesDao().addPages(pages)
 
-        val dbPages = mDatabase.getPagesDao().getAllPages()
+        val dbPages = mDatabase.getPagesDao().getAllPages().first()
 
         assertThat(dbPages, equalTo(pages))
     }

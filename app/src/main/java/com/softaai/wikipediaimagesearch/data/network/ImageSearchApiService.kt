@@ -1,6 +1,7 @@
 package com.softaai.wikipediaimagesearch.data.network
 
 import com.softaai.wikipediaimagesearch.model.ImageSearchApiResponse
+import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
