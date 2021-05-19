@@ -1,4 +1,4 @@
-package com.softaai.wikipediaimagesearch.imagesearch
+package com.softaai.wikipediaimagesearch.imagesearch.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
