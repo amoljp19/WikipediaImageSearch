@@ -13,7 +13,7 @@ data class X590246(
     @Json(name = "pageid")
     val pageid: Int,
     @Json(name = "thumbnail")
-    val thumbnail: ThumbnailXXXXXX,
+    val thumbnail: Thumbnail,
     @Json(name = "title")
     val title: String
 )

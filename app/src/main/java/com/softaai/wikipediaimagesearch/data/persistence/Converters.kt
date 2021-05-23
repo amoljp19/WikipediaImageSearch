@@ -15,6 +15,7 @@ class Converters {
         Moshi.Builder().build().adapter(X11903589::class.java).toJson(x11903589)
 
 
+
     @TypeConverter
     fun fromStringToX13260340(value: String): X13260340? =
         Moshi.Builder().build().adapter(X13260340::class.java).fromJson(value)
@@ -24,6 +25,7 @@ class Converters {
         Moshi.Builder().build().adapter(X13260340::class.java).toJson(x13260340)
 
 
+
     @TypeConverter
     fun fromStringToX1425939(value: String): X1425939? =
         Moshi.Builder().build().adapter(X1425939::class.java).fromJson(value)
@@ -31,6 +33,7 @@ class Converters {
     @TypeConverter
     fun fromX1425939ToString(x1425939: X1425939?): String =
         Moshi.Builder().build().adapter(X1425939::class.java).toJson(x1425939)
+
 
 
     @TypeConverter
@@ -74,23 +77,12 @@ class Converters {
 
 
     @TypeConverter
-    fun fromStringToX407754(value: String): X407754? =
-        Moshi.Builder().build().adapter(X407754::class.java).fromJson(value)
-
-    @TypeConverter
-    fun fromX407754ToString(x407754: X407754?): String =
-        Moshi.Builder().build().adapter(X407754::class.java).toJson(x407754)
-
-
-
-    @TypeConverter
     fun fromStringToX57707(value: String): X57707? =
         Moshi.Builder().build().adapter(X57707::class.java).fromJson(value)
 
     @TypeConverter
     fun fromX57707ToString(x57707: X57707?): String =
         Moshi.Builder().build().adapter(X57707::class.java).toJson(x57707)
-
 
 
     @TypeConverter
@@ -102,6 +94,13 @@ class Converters {
         Moshi.Builder().build().adapter(X590246::class.java).toJson(x590246)
 
 
+    @TypeConverter
+    fun fromStringToX7199609(value: String): X7199609? =
+        Moshi.Builder().build().adapter(X7199609::class.java).fromJson(value)
+
+    @TypeConverter
+    fun fromX7199609ToString(x7199609: X7199609?): String =
+        Moshi.Builder().build().adapter(X7199609::class.java).toJson(x7199609)
 
 
 }

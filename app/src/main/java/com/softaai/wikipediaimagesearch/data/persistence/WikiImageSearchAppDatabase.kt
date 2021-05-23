@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 import com.softaai.wikipediaimagesearch.model.Pages
 
 
-@Database(entities = [Pages::class], version = 1, exportSchema = false)
+@Database(entities = [Pages::class], version = 2, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class WikiImageSearchAppDatabase : RoomDatabase() {
 

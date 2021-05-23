@@ -19,7 +19,6 @@ interface PagesDao {
 //    @Query("SELECT * FROM ${Pages.TABLE_NAME} WHERE ID = :pageId")
 //    fun getPageById(pageId: Int): Flow<Pages>
 
-
     @Query("SELECT * FROM ${Pages.TABLE_NAME}")
     fun getAllPages(): Flow<Pages>
 

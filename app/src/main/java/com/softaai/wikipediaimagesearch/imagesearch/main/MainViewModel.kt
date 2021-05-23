@@ -8,6 +8,7 @@ import com.softaai.wikipediaimagesearch.data.network.State
 import com.softaai.wikipediaimagesearch.data.repository.ImageSearchRepository
 import com.softaai.wikipediaimagesearch.model.Pages
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.collect

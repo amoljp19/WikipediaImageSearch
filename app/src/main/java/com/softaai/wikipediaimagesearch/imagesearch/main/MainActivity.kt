@@ -9,13 +9,14 @@ import com.softaai.wikipediaimagesearch.data.network.State
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class  MainActivity : AppCompatActivity() {
 
     val mViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        getPages()
     }
 
     override fun onStart() {
@@ -35,9 +36,7 @@ class MainActivity : AppCompatActivity() {
             when (state) {
                 is State.Loading -> Toast.makeText(applicationContext, "Loading...", Toast.LENGTH_SHORT).show()
                 is State.Success -> {
-                    if (!state.data.equals(null)) {
-                        Toast.makeText(applicationContext, " " + state.data, Toast.LENGTH_SHORT).show()
-                    }
+                    Toast.makeText(applicationContext, " " + state.data, Toast.LENGTH_SHORT).show()
                 }
                 is State.Error -> {
                     Toast.makeText(applicationContext, " " + state.message, Toast.LENGTH_SHORT).show()
