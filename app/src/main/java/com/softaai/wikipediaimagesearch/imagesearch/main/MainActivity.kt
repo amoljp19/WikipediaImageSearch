@@ -4,19 +4,30 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.softaai.wikipediaimagesearch.R
 import com.softaai.wikipediaimagesearch.data.network.State
+import com.softaai.wikipediaimagesearch.imagesearch.adapter.WikiSearchListAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class  MainActivity : AppCompatActivity() {
 
     val mViewModel: MainViewModel by viewModels()
-
+    lateinit var recyclerView : RecyclerView
+    lateinit var adapter : WikiSearchListAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         getPages()
+
+        recyclerView = findViewById<RecyclerView>(R.id.rvGridView)
+        adapter = WikiSearchListAdapter()
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
+
     }
 
     override fun onStart() {
@@ -36,6 +47,7 @@ class  MainActivity : AppCompatActivity() {
             when (state) {
                 is State.Loading -> Toast.makeText(applicationContext, "Loading...", Toast.LENGTH_SHORT).show()
                 is State.Success -> {
+                    //adapter.submitList(state.data)
                     Toast.makeText(applicationContext, " " + state.data, Toast.LENGTH_SHORT).show()
                 }
                 is State.Error -> {
